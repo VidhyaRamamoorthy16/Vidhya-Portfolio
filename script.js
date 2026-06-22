@@ -469,8 +469,8 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
    12. Supabase Time-on-Site Tracker
    ────────────────────────────────────────────────────────────── */
 (function initSupabaseTracker() {
-  const SUPABASE_URL = 'YOUR_SUPABASE_URL';
-  const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+  const SUPABASE_URL = 'https://lshwujpisqwvgleunlum.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxzaHd1anBpc3F3dmdsZXVubHVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIxMzczMTUsImV4cCI6MjA5NzcxMzMxNX0.iq0yWMuXApPcmovwBdjfIplI9j9qNJs7ItmpYchENNk';
   
   if (SUPABASE_URL === 'YOUR_SUPABASE_URL') return;
 
