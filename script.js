@@ -478,7 +478,7 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   
   function sendVisitData() {
     const duration = parseFloat(((Date.now() - startTime) / 1000).toFixed(1));
-    const endpoint = `${SUPABASE_URL}/rest/v1/page_visits?apikey=${SUPABASE_ANON_KEY}`;
+    const endpoint = `${SUPABASE_URL}/rest/v1/page_visits`;
     
     const payload = JSON.stringify({
       duration_seconds: duration,
@@ -486,20 +486,16 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
       user_agent: navigator.userAgent
     });
 
-    if (navigator.sendBeacon) {
-      const blob = new Blob([payload], { type: 'application/json' });
-      navigator.sendBeacon(endpoint, blob);
-    } else {
-      fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
-        },
-        body: payload,
-        keepalive: true
-      }).catch(() => {});
-    }
+    fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+      },
+      body: payload,
+      keepalive: true
+    }).catch(() => {});
   }
 
   document.addEventListener('visibilitychange', () => {
