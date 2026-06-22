@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidhya Ramamoorthy — Software Developer</title>
+  <meta name="description" content="Vidhya Ramamoorthy — Software developer based in Hosur, India. Building scalable backends and elegant interfaces with a futuristic edge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body class="is-loading">
+
+  <!-- ═══ SVG GRADIENTS DEFS ═══ -->
+  <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+    <defs>
+      <!-- Gradient for the rounded single-stroke V -->
+      <linearGradient id="stroke-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#8b5cf6" />
+        <stop offset="100%" stop-color="#06b6d4" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ═══ SPLASH INTRO ═══ -->
+  <div class="splash" id="splash">
+    <div class="splash-blobs">
+      <div class="splash-blob sb1"></div>
+      <div class="splash-blob sb2"></div>
+    </div>
+    <div class="splash-glass"></div>
+    <div class="splash-logo-container">
+      <svg class="splash-logo-svg" id="splashLogo" viewBox="0 0 100 100" width="180" height="180">
+        <path d="M 25,22 L 50,78 L 75,22" fill="none" stroke="url(#stroke-grad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+        <path class="logo-highlight-path" d="M 25,22 L 50,78 L 75,22" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- ═══ GRADIENT MESH BACKGROUND ═══ -->
+  <div class="bg-mesh" id="bgMesh" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- ═══ CUSTOM CURSOR ═══ -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ═══ FLOATING SOCIALS ═══ -->
+  <div class="social-float" id="socialFloat">
+    <div class="social-float-item" style="animation-delay: 0s;">
+      <a href="https://github.com/VidhyaRamamoorthy16/" target="_blank" class="social-float-orb" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+    </div>
+    <div class="social-float-item" style="animation-delay: -1.5s;">
+      <a href="https://www.linkedin.com/in/vidhya-ramamoorthy-8530ba278/" target="_blank" class="social-float-orb" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+    </div>
+    <div class="social-float-item" style="animation-delay: -3s;">
+      <a href="mailto:vidhyar1635@gmail.com" class="social-float-orb" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══ NAV ═══ -->
+  <nav class="glass-nav" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#" aria-label="Home">
+        <svg class="nav-logo-svg" id="navLogo" viewBox="0 0 100 100" width="28" height="28" style="opacity: 0; transition: opacity 0.3s ease;">
+          <path d="M 25,22 L 50,78 L 75,22" fill="none" stroke="url(#stroke-grad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link"><span class="nav-idx">01</span>About</a></li>
+        <li><a href="#skills" class="nav-link"><span class="nav-idx">02</span>Skills</a></li>
+        <li><a href="#experience" class="nav-link"><span class="nav-idx">03</span>Experience</a></li>
+        <li><a href="#projects" class="nav-link"><span class="nav-idx">04</span>Projects</a></li>
+        <li><a href="#contact" class="nav-link"><span class="nav-idx">05</span>Contact</a></li>
+        <li><a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-cta">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <p class="hero-greeting hero-reveal">Hello, I'm</p>
+      <h1 class="hero-name hero-reveal">
+        <span class="gradient-text">Vidhya Ramamoorthy</span>
+      </h1>
+      <h2 class="hero-role hero-reveal">
+        <span class="role-static">I'm a&nbsp;</span>
+        <span class="role-rotator" id="roleRotator">Web Developer</span>
+        <span class="role-cursor">|</span>
+      </h2>
+      <p class="hero-desc hero-reveal">
+        Software developer based in Hosur, India — building scalable backends,
+        thoughtful APIs, and clean interfaces that people genuinely enjoy using.
+      </p>
+      <div class="hero-ctas hero-reveal">
+        <a href="#projects" class="glass-btn primary">
+          <span>View Projects</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="glass-btn secondary">
+          <span>Get in Touch</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="section-header reveal-item">
+        <span class="section-idx">01</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="glass-card about-bio reveal-item">
+          <p>Hello! I'm Vidhya, a passionate Software Developer and Computer Science student from Tamil Nadu, India. I enjoy turning ideas into digital experiences and building applications that are fast, intuitive, and impactful.</p>
+          <p>My interests lie in full-stack development, where I work with modern web technologies to create responsive user interfaces, robust backend systems, and efficient databases. I enjoy solving complex problems, learning new technologies, and transforming concepts into real-world solutions.</p>
+          <p>I have experience working with HTML, CSS, JavaScript, React.js, Java, SQL, MongoDB, and APIs through academic projects, internships, and personal development work. Every project is an opportunity to learn, improve, and create something meaningful.</p>
+          <p>Beyond coding, I'm constantly exploring new technologies, enhancing my skills, and working on projects that challenge me to grow as a developer. My goal is to build software that not only works well but also delivers a great user experience.</p>
+        </div>
+        <div class="about-stats">
+          <div class="glass-card stat-card reveal-item">
+            <span class="stat-num" data-target="4">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Projects Shipped</span>
+          </div>
+          <div class="glass-card stat-card reveal-item">
+            <span class="stat-num" data-target="10">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="glass-card stat-card reveal-item">
+            <span class="stat-num" data-target="4">0</span>
+            <span class="stat-label">Internships Completed</span>
+          </div>
+          <div class="glass-card stat-card reveal-item">
+            <span class="stat-num" data-target="8.5">0</span>
+            <span class="stat-label">Academic CGPA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <div class="section-header reveal-item">
+        <span class="section-idx">02</span>
+        <h2 class="section-title">Skills &amp; Tools</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skills-group reveal-item">
+          <h3 class="skills-label">Languages</h3>
+          <div class="skills-tiles">
+            <div class="glass-chip skill-tile" data-color="#e34f26">HTML</div>
+            <div class="glass-chip skill-tile" data-color="#1572b6">CSS</div>
+            <div class="glass-chip skill-tile" data-color="#f7df1e">JavaScript</div>
+            <div class="glass-chip skill-tile" data-color="#f89820">Core Java</div>
+            <div class="glass-chip skill-tile" data-color="#f89820">Advance Java</div>
+            <div class="glass-chip skill-tile" data-color="#00758f">SQL</div>
+          </div>
+        </div>
+        <div class="skills-group reveal-item">
+          <h3 class="skills-label">Frameworks &amp; Libraries</h3>
+          <div class="skills-tiles">
+            <div class="glass-chip skill-tile" data-color="#61dafb">React.js</div>
+            <div class="glass-chip skill-tile" data-color="#38bdf8">Tailwind CSS</div>
+          </div>
+        </div>
+        <div class="skills-group reveal-item">
+          <h3 class="skills-label">Databases</h3>
+          <div class="skills-tiles">
+            <div class="glass-chip skill-tile" data-color="#00758f">SQL</div>
+            <div class="glass-chip skill-tile" data-color="#47a248">MongoDB</div>
+          </div>
+        </div>
+        <div class="skills-group reveal-item">
+          <h3 class="skills-label">Other</h3>
+          <div class="skills-tiles">
+            <div class="glass-chip skill-tile" data-color="#ff6c37">APIs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section class="section" id="experience">
+    <div class="section-inner">
+      <div class="section-header reveal-item">
+        <span class="section-idx">03</span>
+        <h2 class="section-title">Experience</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline reveal-item">
+        <!-- Tap Academy Internship -->
+        <div class="timeline-item active" data-role="0">
+          <div class="timeline-node"></div>
+          <div class="timeline-head">
+            <h3 class="timeline-title">Java Full Stack Intern <span class="timeline-at">@ Tap Academy</span></h3>
+            <p class="timeline-period">January 2026 — Present</p>
+          </div>
+          <div class="timeline-body glass-card">
+            <ul>
+              <li>Selected through a campus placement drive.</li>
+              <li>Undergoing the comprehensive Java Full Stack training and internship program, focusing on Java EE, Spring Framework, Hibernate, and advanced database integration.</li>
+              <li>Building modular backend microservices and modern frontend architectures.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- White and Box Tech Products Internship -->
+        <div class="timeline-item" data-role="1">
+          <div class="timeline-node"></div>
+          <div class="timeline-head">
+            <h3 class="timeline-title">Junior Software Developer Intern <span class="timeline-at">@ White and Box Tech Products</span></h3>
+            <p class="timeline-period">June 2025 — October 2025</p>
+          </div>
+          <div class="timeline-body glass-card">
+            <ul>
+              <li>Gained real-world IT industry experience working onsite in Bangalore.</li>
+              <li>Designed and developed the PHP backend architecture and frontend interface for the Hotel Admin control panel.</li>
+              <li>Collaborated on database design and admin workflow performance optimization.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PMC Tech Education -->
+        <div class="timeline-item" data-role="2">
+          <div class="timeline-node"></div>
+          <div class="timeline-head">
+            <h3 class="timeline-title">Computer Science and Engineering <span class="timeline-at">@ PMC Tech</span></h3>
+            <p class="timeline-period">2022 — 2026</p>
+          </div>
+          <div class="timeline-body glass-card">
+            <ul>
+              <li><strong>CGPA:</strong> 8.5</li>
+              <li>Pursuing a Bachelor of Engineering in Computer Science and Engineering.</li>
+              <li>Focusing on full-stack development, database schema design, and software engineering principles.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <div class="section-header reveal-item">
+        <span class="section-idx">04</span>
+        <h2 class="section-title">Things I've Built</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Featured Projects -->
+      <div class="featured-projects">
+        <div class="glass-card tilt-card featured-card spotlight reveal-item" id="tiltCard1">
+          <div class="spotlight-content">
+            <div class="spotlight-header">
+              <span class="featured-label">Featured Project</span>
+              <span class="academic-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="academic-icon"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                Research Paper Published
+              </span>
+            </div>
+            
+            <h3 class="featured-title">ShopSphere</h3>
+            <h4 class="featured-tagline">Intelligent API Gateway with Real-Time Monitoring</h4>
+            
+            <p class="featured-desc">A full-stack e-commerce gateway system featuring a real-time Random Forest ML pipeline that inspects request patterns to block threats (SQLi, XSS, DDoS, brute force) with 90.21% accuracy at sub-millisecond speeds. Rather than binary IP blocking, an adaptive risk-scoring algorithm dynamically throttles suspicious traffic. Threat logs are streamed in real time via WebSockets to an isolated, read-only analytics dashboard, ensuring zero performance coupling with the primary gateway transaction flow. Deployed across a distributed multi-cloud stack including Vercel, Render, Upstash, and Supabase.</p>
+            
+            <!-- Key Metrics Mini-Stats -->
+            <div class="spotlight-metrics">
+              <div class="metric-chip">
+                <span class="metric-val">90.21%</span>
+                <span class="metric-lbl">Threat Detection</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-val">74.66ms</span>
+                <span class="metric-lbl">P95 Latency</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-val">5</span>
+                <span class="metric-lbl">Microservices</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-val">0%</span>
+                <span class="metric-lbl">Error Rate</span>
+              </div>
+            </div>
+
+            <div class="featured-tags">
+              <span class="glass-chip">Python</span>
+              <span class="glass-chip">FastAPI</span>
+              <span class="glass-chip">React</span>
+              <span class="glass-chip">Node.js</span>
+              <span class="glass-chip">Redis</span>
+              <span class="glass-chip">Supabase</span>
+              <span class="glass-chip">scikit-learn</span>
+              <span class="glass-chip">Random Forest</span>
+              <span class="glass-chip">WebSocket</span>
+              <span class="glass-chip">Razorpay</span>
+            </div>
+            
+            <div class="featured-links">
+              <a href="https://github.com/VidhyaRamamoorthy16/ShopSphere" target="_blank" aria-label="GitHub Repo" class="cta-mini-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span>Code</span>
+              </a>
+              <a href="https://shop-sphere-wine.vercel.app" target="_blank" aria-label="Live Storefront" class="cta-mini-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span>Storefront</span>
+              </a>
+              <a href="https://shopsphere-monitor.vercel.app" target="_blank" aria-label="Monitor Dashboard" class="cta-mini-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span>Monitor</span>
+              </a>
+            </div>
+          </div>
+          <div class="spotlight-visual">
+            <img src="shopsphere_dashboard.png?v=2" alt="ShopSphere API Gateway Traffic Monitor Dashboard" class="spotlight-img">
+          </div>
+        </div>
+      </div> <!-- This closes .featured-projects -->
+
+      <!-- Other Projects -->
+      <h3 class="other-heading reveal-item">Other Noteworthy Projects</h3>
+      <div class="other-grid">
+        <div class="glass-card other-card reveal-item">
+          <div class="other-top">
+            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <div class="other-links">
+              <a href="https://github.com/VidhyaRamamoorthy16/Internal_Hotel_Management" target="_blank" class="icon-link" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+              <a href="https://internal-hotel-management-01.vercel.app/" target="_blank" class="icon-link" aria-label="Live Demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <h4 class="other-title">Internal Hotel Management</h4>
+          <span class="other-role">Role: Backend & Frontend Design — Team Project</span>
+          <p class="other-desc">A collaborative hotel reservation and back-office management platform. Features guest booking flows (room search, coupon code integration, secure payment checkout) and a comprehensive admin operations dashboard managing inventory, housekeeping, and occupancy metrics.</p>
+          <div class="other-tags">
+            <span class="glass-chip sm">React</span>
+            <span class="glass-chip sm">Node.js</span>
+            <span class="glass-chip sm">Express</span>
+            <span class="glass-chip sm">MongoDB</span>
+            <span class="glass-chip sm">REST APIs</span>
+            <span class="glass-chip sm">Vercel</span>
+          </div>
+        </div>
+        <div class="glass-card other-card reveal-item">
+          <div class="other-top">
+            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <div class="other-links">
+              <a href="https://github.com/VidhyaRamamoorthy16/AptiQuest" target="_blank" class="icon-link" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+              <a href="https://aptiquest-web.vercel.app/" target="_blank" class="icon-link" aria-label="Live Demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <h4 class="other-title">AptiQuest</h4>
+          <span class="other-role">Role: Full Stack Developer — Sole Project</span>
+          <p class="other-desc">A full-stack aptitude prep platform where students practice topic-wise MCQs, take timed mock tests, track daily streaks, earn badges, and compete on a leaderboard — built solo from scratch.</p>
+          <div class="other-tags">
+            <span class="glass-chip sm">React</span>
+            <span class="glass-chip sm">Node.js</span>
+            <span class="glass-chip sm">Express.js</span>
+            <span class="glass-chip sm">MySQL</span>
+            <span class="glass-chip sm">Tailwind CSS</span>
+            <span class="glass-chip sm">JWT</span>
+            <span class="glass-chip sm">Recharts</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="section contact" id="contact">
+    <div class="section-inner contact-inner">
+      <div class="section-header reveal-item">
+        <span class="section-idx">05</span>
+        <h2 class="section-title">Get In Touch</h2>
+      </div>
+      <p class="contact-desc reveal-item">I'm currently open to new opportunities. Whether you have a question, a project in mind, or just want to say hello — my inbox is always open.</p>
+      <div class="contact-socials reveal-item">
+        <a href="https://github.com/VidhyaRamamoorthy16/" target="_blank" class="social-orb" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/vidhya-ramamoorthy-8530ba278/" target="_blank" class="social-orb" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+      <a href="mailto:vidhyar1635@gmail.com" class="cta-animated reveal-item">
+        <span>Say Hello</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <a href="https://github.com/VidhyaRamamoorthy16/" target="_blank" class="footer-credit">Designed & Built by Vidhya Ramamoorthy</a>
+  </footer>
+
+  <script defer src="/_vercel/insights/script.js"></script>
+<script>
+// Supabase time-on-site tracker (placeholder values)
+// Replace YOUR_SUPABASE_URL and YOUR_SUPABASE_ANON_KEY with actual credentials
+const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+// Initialize Supabase client if needed
+</script>
+<script src="script.js?v=10"></script>
+</body>
+</html>
