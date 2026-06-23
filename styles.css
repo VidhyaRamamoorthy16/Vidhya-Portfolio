@@ -1211,12 +1211,12 @@ body.cursor-hover .cursor-glow {
 
 @media (max-width: 992px) {
   .featured-card.spotlight {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 28px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .spotlight-metrics {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
@@ -1483,7 +1483,7 @@ body.cursor-hover .cursor-glow {
   }
 
   .featured-projects {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .other-grid {
@@ -1574,6 +1574,16 @@ body.cursor-hover .cursor-glow {
   }
 
   /* Grids */
+  .glass-card,
+  .featured-card {
+    padding: 24px;
+  }
+
+  .featured-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
   .other-grid {
     grid-template-columns: 1fr;
   }
