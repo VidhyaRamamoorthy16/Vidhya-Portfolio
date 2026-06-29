@@ -498,6 +498,78 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     }).catch(() => {});
   }
 
+  function logEvent(type, target) {
+    const endpoint = `${SUPABASE_URL}/rest/v1/portfolio_events`;
+    const payload = JSON.stringify({
+      event_type: type,
+      event_target: target,
+      path: window.location.pathname,
+      user_agent: navigator.userAgent
+    });
+
+    fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+      },
+      body: payload,
+      keepalive: true
+    }).catch(() => {});
+  }
+
+  // 1. Resume Clicks
+  document.querySelectorAll('a[href="resume.pdf"]').forEach(link => {
+    link.addEventListener('click', () => logEvent('click', 'resume'));
+  });
+
+  // 2. Spotlight Project Links
+  document.querySelectorAll('.featured-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      const label = link.getAttribute('aria-label') || 'link';
+      logEvent('click', `project:ShopSphere:${label}`);
+    });
+  });
+
+  // 3. Noteworthy Project Links
+  document.querySelectorAll('.other-card').forEach(card => {
+    const titleEl = card.querySelector('.other-title');
+    const title = titleEl ? titleEl.textContent.trim() : 'Unknown';
+    card.querySelectorAll('.other-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        const label = link.getAttribute('aria-label') || 'link';
+        logEvent('click', `project:${title}:${label}`);
+      });
+    });
+  });
+
+  // 4. Floating Social Orbs
+  document.querySelectorAll('.social-float-orb').forEach(link => {
+    link.addEventListener('click', () => {
+      const label = link.getAttribute('aria-label') || 'floating-social';
+      logEvent('click', `social:floating:${label}`);
+    });
+  });
+
+  // 5. Contact Social Orbs
+  document.querySelectorAll('.social-orb').forEach(link => {
+    link.addEventListener('click', () => {
+      const label = link.getAttribute('aria-label') || 'contact-social';
+      logEvent('click', `social:contact:${label}`);
+    });
+  });
+
+  // 6. Contact Form/Email CTA Button
+  document.querySelectorAll('.cta-animated').forEach(link => {
+    link.addEventListener('click', () => logEvent('click', 'contact:say_hello'));
+  });
+
+  // 7. Get in Touch button in Hero
+  document.querySelectorAll('.hero-ctas a[href="#contact"]').forEach(link => {
+    link.addEventListener('click', () => logEvent('click', 'hero:get_in_touch'));
+  });
+
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'hidden') {
       sendVisitData();
